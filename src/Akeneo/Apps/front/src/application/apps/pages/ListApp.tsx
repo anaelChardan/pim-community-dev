@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
 import {PimView} from '../../../infrastructure/pim-view/PimView';
 import {ApplyButton, Breadcrumb, BreadcrumbItem, Header, Page} from '../../common';
 import {BreadcrumbRouterLink} from '../../shared/router';
 import {Translate} from '../../shared/translate';
+import {AppGrid} from '../components/AppGrid';
 
 export const ListApp = () => {
     const breadcrumb = (
@@ -35,8 +35,8 @@ export const ListApp = () => {
             <Header breadcrumb={breadcrumb} buttons={[createButton]} userButtons={userButtons}>
                 <Translate id='pim_menu.item.apps' />
             </Header>
-            ListApp
-            <Link to='/apps/1'>Edit</Link>
+
+            <AppGrid />
         </Page>
     );
 };
